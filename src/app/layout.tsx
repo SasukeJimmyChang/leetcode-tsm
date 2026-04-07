@@ -7,6 +7,10 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'TSMC LeetCode Tracker | 台積電前端刷題追蹤器',
   description: '針對台積電 IT 前端工程師面試準備的 LeetCode 刷題追蹤網站',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
