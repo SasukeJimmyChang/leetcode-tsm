@@ -25,7 +25,18 @@ export interface ProgressData {
   [problemId: string]: {
     completed: boolean;
     completedAt: string | null;
+    lastReviewedAt?: string | null;
   };
+}
+
+export interface ReviewItem {
+  problemId: string;
+  completedAt: string;
+  daysSinceCompleted: number;
+  daysSinceLastReview: number;
+  intervalHit: number;
+  reason: string;
+  urgency: 'high' | 'medium' | 'low';
 }
 
 export interface StreakData {

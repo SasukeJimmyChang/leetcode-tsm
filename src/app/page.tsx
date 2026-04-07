@@ -7,9 +7,11 @@ import { ProgressRing } from '@/components/dashboard/ProgressRing';
 import { StatsCards } from '@/components/dashboard/StatsCards';
 import { CategoryRadar } from '@/components/dashboard/CategoryRadar';
 import { TodayRecommend } from '@/components/dashboard/TodayRecommend';
+import { ReviewSection } from '@/components/dashboard/ReviewSection';
 
 export default function DashboardPage() {
-  const { completedCount, isCompleted, getCompletedDates } = useProgress();
+  const { completedCount, isCompleted, getCompletedDates, getReviewItems, markReviewed } = useProgress();
+  const reviewItems = getReviewItems();
   const dates = getCompletedDates();
   const { currentStreak } = useStreak(dates);
 
@@ -42,6 +44,13 @@ export default function DashboardPage() {
           currentStreak={currentStreak}
         />
       </div>
+
+      {/* Review Section */}
+      {reviewItems.length > 0 && (
+        <div className="mb-8">
+          <ReviewSection reviewItems={reviewItems} onMarkReviewed={markReviewed} />
+        </div>
+      )}
 
       {/* Category Progress + Today Recommend */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
