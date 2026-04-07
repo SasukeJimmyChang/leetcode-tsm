@@ -9,20 +9,9 @@ import { CategoryRadar } from '@/components/dashboard/CategoryRadar';
 import { TodayRecommend } from '@/components/dashboard/TodayRecommend';
 
 export default function DashboardPage() {
-  const { completedCount, isCompleted, getCompletedDates, loaded } = useProgress();
+  const { completedCount, isCompleted, getCompletedDates } = useProgress();
   const dates = getCompletedDates();
   const { currentStreak } = useStreak(dates);
-
-  if (!loaded) {
-    return (
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center">
-        <div
-          className="w-8 h-8 border-2 rounded-full animate-spin mx-auto"
-          style={{ borderColor: 'var(--color-border)', borderTopColor: 'var(--color-primary)' }}
-        />
-      </div>
-    );
-  }
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
