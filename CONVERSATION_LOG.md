@@ -38,3 +38,39 @@
 
 ### 狀態
 - 已完整閱讀專案，準備接收下一步實作指令
+
+---
+
+## Session 2 — 2026-04-08
+
+### 使用者需求
+- 上傳 56 張台積電 HackerRank 題庫照片
+- 分析題目、對應 LeetCode 相似題型編號
+- 加入專案題目資料庫中
+
+### 整理結果
+
+從 56 張照片中識別出 **11 道不重複考古題**，新增為「台積電 HackerRank 考古」分類：
+
+| # | 考古題原名 | 對應 LeetCode | 難度 |
+|---|--------|-------------|------|
+| 1 | FizzBuzz | #412 Fizz Buzz | Easy |
+| 2 | Closest Numbers (Min Abs Diff) | #1200 Minimum Absolute Difference | Easy |
+| 3 | Spreadsheet Notation Conversion | #168 Excel Sheet Column Title | Easy |
+| 4 | Bucket Fill (strokesRequired) | #733 Flood Fill | Easy |
+| 5 | Reversing Linked List | #206 Reverse Linked List | Easy |
+| 6 | Simple Cipher (simpleCipher) | #1844 Replace All Digits with Characters | Easy |
+| 7 | Connecting Computers (minOperations) | #1319 Number of Operations to Make Network Connected | Medium |
+| 8 | Do They Belong (pointsBelong) | #812 Largest Triangle Area | Medium |
+| 9 | Star Sum (bestSumKStar) | 星狀圖最大和（自定義題） | Medium |
+| 10 | Server Installation (findCentralNode) | #2603 Collect Coins in a Tree | Hard |
+| 11 | Server Deployment (getMaxDifficulty) | #2616 Minimize the Maximum Difference of Pairs | Hard |
+
+### 實作變更
+- `src/data/problems.ts` — 新增第 15 個分類「TSMC HackerRank」，包含 11 道考古題與 LeetCode 對應
+- 每題都含 `note` 欄位說明原始考古題的題目描述
+- 所有題目都標記 `tags: ['台積考古']`
+- `npm run build` 測試通過
+
+### 狀態
+- 考古題已加入專案，準備接收下一步實作指令

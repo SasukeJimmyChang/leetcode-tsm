@@ -224,6 +224,27 @@ export const categories: Category[] = [
       { id: '269', leetcodeNumber: 269, title: 'Alien Dictionary', difficulty: 'Hard', url: 'https://leetcode.com/problems/alien-dictionary/', isMustDo: false, category: 'trie-advanced', tags: [] },
     ],
   },
+  {
+    id: 'tsmc-hackerrank',
+    name: 'TSMC HackerRank',
+    nameZh: '台積電 HackerRank 考古',
+    emoji: '🏭',
+    description: '台積電 HackerRank 實際考古題與 LeetCode 對應練習',
+    frequency: 'high',
+    problems: [
+      { id: 'tsmc-412', leetcodeNumber: 412, title: 'Fizz Buzz', titleZh: 'FizzBuzz', difficulty: 'Easy', url: 'https://leetcode.com/problems/fizz-buzz/', isMustDo: true, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：FizzBuzz，經典基礎題' },
+      { id: 'tsmc-1200', leetcodeNumber: 1200, title: 'Minimum Absolute Difference', titleZh: '最小絕對差配對', difficulty: 'Easy', url: 'https://leetcode.com/problems/minimum-absolute-difference/', isMustDo: true, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Closest Numbers — 排序後找最小絕對差的所有配對' },
+      { id: 'tsmc-168', leetcodeNumber: 168, title: 'Excel Sheet Column Title', titleZh: '試算表欄位轉換', difficulty: 'Easy', url: 'https://leetcode.com/problems/excel-sheet-column-title/', isMustDo: true, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Spreadsheet Notation Conversion — 每列 702 欄(26×27)，將 cell number 轉為「行號+欄標」' },
+      { id: 'tsmc-733', leetcodeNumber: 733, title: 'Flood Fill', titleZh: 'Flood Fill 填色', difficulty: 'Easy', url: 'https://leetcode.com/problems/flood-fill/', isMustDo: true, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Bucket Fill (strokesRequired) — 計算 2D 字元矩陣需要幾次 flood fill，搭配 #200 Number of Islands 練習' },
+      { id: 'tsmc-206', leetcodeNumber: 206, title: 'Reverse Linked List', titleZh: '反轉鏈結串列', difficulty: 'Easy', url: 'https://leetcode.com/problems/reverse-linked-list/', isMustDo: true, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Reversing Linked List — 反覆從兩端縮短區間反轉，進階可搭配 #25 Reverse Nodes in k-Group' },
+      { id: 'tsmc-1319', leetcodeNumber: 1319, title: 'Number of Operations to Make Network Connected', titleZh: '連接所有電腦的最少操作', difficulty: 'Medium', url: 'https://leetcode.com/problems/number-of-operations-to-make-network-connected/', isMustDo: true, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Connecting Computers (minOperations) — 移動邊使所有節點連通，Union-Find 經典題' },
+      { id: 'tsmc-812', leetcodeNumber: 812, title: 'Largest Triangle Area', titleZh: '三角形與點的歸屬', difficulty: 'Medium', url: 'https://leetcode.com/problems/largest-triangle-area/', isMustDo: true, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Do They Belong (pointsBelong) — 判斷三角形是否有效、兩點是否在三角形內，使用面積法或向量叉積' },
+      { id: 'tsmc-1719', leetcodeNumber: 1719, title: 'Number Of Ways To Reconstruct A Tree', titleZh: '星狀圖最大和', difficulty: 'Medium', url: 'https://leetcode.com/problems/find-the-celebrity/', isMustDo: true, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Star Sum (bestSumKStar) — 找 k-star 子圖的最大節點值加總，對每個節點取最大的 k 個鄰居值排序加總' },
+      { id: 'tsmc-cipher', leetcodeNumber: 1844, title: 'Replace All Digits with Characters', titleZh: '字母輪盤解密', difficulty: 'Easy', url: 'https://leetcode.com/problems/replace-all-digits-with-characters/', isMustDo: true, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Simple Cipher — 字母輪盤 Caesar cipher，逆時針移 k 位解密，即 (char - k) mod 26' },
+      { id: 'tsmc-2603', leetcodeNumber: 2603, title: 'Collect Coins in a Tree', titleZh: '伺服器安裝最佳節點', difficulty: 'Hard', url: 'https://leetcode.com/problems/collect-coins-in-a-tree/', isMustDo: false, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Server Installation (findCentralNode) — 加權樹上找節點 C 使 Time(C,X)+Time(C,Y)+Time(C,Z) 最小' },
+      { id: 'tsmc-2616', leetcodeNumber: 2616, title: 'Minimize the Maximum Difference of Pairs', titleZh: '伺服器部署難度', difficulty: 'Hard', url: 'https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/', isMustDo: false, category: 'tsmc-hackerrank', tags: ['台積考古'], note: '台積考古原題：Server Deployment Difficulty (getMaxDifficulty) — 將 n 個模組分配到 3 台伺服器，最大化 |d1-d2|+|d2-d3|' },
+    ],
+  },
 ];
 
 export const allProblems = categories.flatMap((c) => c.problems);
