@@ -50,7 +50,7 @@ export function ProblemRow({ problem, completed, onToggle }: Props) {
         {problem.title}
       </a>
 
-      <div className="flex items-center gap-2 shrink-0">
+      <div className="flex items-center gap-1.5 shrink-0 flex-wrap justify-end">
         <DifficultyBadge difficulty={problem.difficulty} />
 
         {problem.isMustDo && (
@@ -62,9 +62,18 @@ export function ProblemRow({ problem, completed, onToggle }: Props) {
           </span>
         )}
 
+        {problem.tags.includes('台積實戰') && (
+          <span
+            className="inline-flex px-1.5 py-0.5 rounded text-xs font-semibold"
+            style={{ background: 'var(--color-tsmc-real-bg)', color: 'var(--color-tsmc-real)' }}
+          >
+            台積實戰
+          </span>
+        )}
+
         {problem.tags.includes('台積考古') && (
           <span
-            className="hidden sm:inline-flex px-1.5 py-0.5 rounded text-xs font-semibold"
+            className="inline-flex px-1.5 py-0.5 rounded text-xs font-semibold"
             style={{ background: 'var(--color-tsmc-bg)', color: 'var(--color-accent-text)' }}
           >
             台積考古

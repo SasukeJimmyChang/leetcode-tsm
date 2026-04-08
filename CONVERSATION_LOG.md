@@ -74,3 +74,29 @@
 
 ### 狀態
 - 考古題已加入專案，準備接收下一步實作指令
+
+---
+
+## Session 3 — 2026-04-08
+
+### 使用者需求
+1. 台積實戰考題要與台積考古區分（新增「台積實戰」標籤）
+2. 手機上要能顯示所有 tag（原本台積考古 tag 在手機上被 hidden）
+3. 推送到 main 分支
+
+### 實作變更
+- `src/app/globals.css` — 新增 `--color-tsmc-real` / `--color-tsmc-real-bg` 色彩變數（紅色系，與考古金色區分）
+- `src/components/problems/ProblemRow.tsx`：
+  - 移除台積考古標籤的 `hidden sm:` 前綴，手機也能顯示
+  - 新增「台積實戰」標籤渲染（紅色系）
+  - tag 容器改為 `flex-wrap` 確保多個 tag 不會被截斷
+- `src/data/problems.ts` — TSMC HackerRank 分類的題目改用 `tags: ['台積實戰']`
+- `npm run build` 通過
+- smoke test 71/71 全部通過
+
+### 標籤說明
+- **台積考古**（金色）：其他分類中與台積考試類似的 LeetCode 題目
+- **台積實戰**（紅色）：從 HackerRank 考試截圖直接對應的實際考題
+
+### 狀態
+- 已完成，已推送到 main

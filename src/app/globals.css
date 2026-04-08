@@ -33,6 +33,8 @@
   --color-must-do-bg: oklch(0.95 0.04 300);
   --color-tsmc: oklch(0.7 0.14 75);
   --color-tsmc-bg: oklch(0.95 0.05 75);
+  --color-tsmc-real: oklch(0.55 0.2 25);
+  --color-tsmc-real-bg: oklch(0.95 0.04 15);
 
   --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-body: 'IBM Plex Sans', system-ui, sans-serif;
@@ -65,6 +67,8 @@
   --color-hard-bg: oklch(0.25 0.04 25);
   --color-must-do-bg: oklch(0.25 0.04 300);
   --color-tsmc-bg: oklch(0.25 0.04 75);
+  --color-tsmc-real: oklch(0.75 0.16 25);
+  --color-tsmc-real-bg: oklch(0.25 0.06 15);
 }
 
 @theme inline {
